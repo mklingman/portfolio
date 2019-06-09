@@ -125,3 +125,10 @@ nav ul li a:hover::after {
 		transform: translateX(0);
 	}
 }
+
+/*start about css*/
+
+.header2 {
+	background-image: none;
+	background-color: lightgrey;
+}
