@@ -38,6 +38,7 @@ nav {
 	align-items: center;
 	text-transform: uppercase;
 	font-size: 1.6rem;
+	line-height: 2rem
 }
 
 .portfolio {
@@ -51,11 +52,14 @@ nav {
 	color: crimson;
 }
 
+/*FLEX BOX UL POSSIBLE position horizontal*/
+
 /*
 nav ul {
 	display: flex;
 }
 */
+
 
 nav ul li {
 	list-style: none;
@@ -135,7 +139,7 @@ main {
 
 .header2 {
 	background-image: none;
-	background-color: lightgrey;
+	background-color: lightgray;
 	width: 100%;
 	height: 20vh;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)) background-size: cover;
@@ -144,7 +148,7 @@ main {
 
 h2 {
 	text-align: center;
-	color: whitesmoke;
+	color: #eee;
 	padding-top: 8rem;
 	padding-bottom: 2rem;
 }
@@ -153,9 +157,7 @@ h2 {
 	background-color: lightgray;
 }
 
-.body2 portfolio {
-	color: aqua;
-}
+
 
 p {
 	display: flex;
@@ -167,6 +169,7 @@ p {
 	font-size: 16px;
 }
 
+
 .aboutpic {
 	display: flex;
 	justify-content: center;
@@ -174,6 +177,8 @@ p {
 	padding-bottom: 5rem;
 
 }
+
+
 
 div.img {
 	text-align: center
@@ -192,6 +197,13 @@ div.img {
 
 }
 
+/*
+.link2 {
+	text-decoration: none;
+	color: black;
+}
+*/
+
 @media all and (min-width:360px) and (max-width:900px) {
 	p {
 		font-size: 18px;
@@ -208,4 +220,63 @@ div.img {
 		padding-bottom: 1rem;
 
 	}
+
+	.workspic {
+		display: flex;
+		justify-content: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+	}
+
+
+
+	/*trial here shifting nav bar in response mode*/
+
+	nav li {
+		line-height: 3rem;
+		/*
+		align-items: flex-end;
+		flex-direction: column;
+		float: right;
+*/
+
+	}
+
+	h2 {
+		padding-top: 10rem;
+	}
+}
+
+/*BEGIN PORTFOLIO PAGE CSS HERE*/
+
+.linkcolor {
+	color: black;
+	padding-left: 10px;
+}
+
+.linkcolormore {
+	color: #eee;
+	padding-left: 10px;
+}
+
+
+
+.morepic {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)), url(images/house.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.workspic {
+	display: flex;
+	justify-content: center;
+	padding-top: 1pix;
+	padding-bottom: 2rem;
+
+}
+
+.pdf {
+	padding: 50px;
 }
