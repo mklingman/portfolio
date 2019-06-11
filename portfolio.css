@@ -139,7 +139,7 @@ main {
 
 .header2 {
 	background-image: none;
-	background-color: lightgray;
+	background-color: white;
 	width: 100%;
 	height: 20vh;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)) background-size: cover;
@@ -149,12 +149,12 @@ main {
 h2 {
 	text-align: center;
 	color: #eee;
-	padding-top: 8rem;
+	padding-top: 6rem;
 	padding-bottom: 2rem;
 }
 
 .body2 {
-	background-color: lightgray;
+	background-color: white;
 }
 
 
@@ -197,12 +197,32 @@ div.img {
 
 }
 
-/*
 .link2 {
 	text-decoration: none;
 	color: black;
 }
-*/
+
+.newhead {
+	text-decoration: none;
+	color: black;
+	font-family: "Roboto Cn", sans-serif;
+	letter-spacing: 2px;
+
+}
+
+.newhead1 {
+	text-decoration: none;
+	color: black;
+	letter-spacing: .5px;
+	font-weight: 300;
+}
+
+.newhead2 {
+	text-decoration: none;
+	color: #eee;
+	letter-spacing: .5px;
+	font-weight: 300;
+}
 
 @media all and (min-width:360px) and (max-width:900px) {
 	p {
@@ -231,6 +251,7 @@ div.img {
 
 
 
+
 	/*trial here shifting nav bar in response mode*/
 
 	nav li {
@@ -255,9 +276,18 @@ div.img {
 	padding-left: 10px;
 }
 
+.linkcolor:hover {
+	color: indianred;
+}
+
 .linkcolormore {
 	color: #eee;
 	padding-left: 10px;
+	letter-spacing: 5px;
+}
+
+.linkcolormore:hover {
+	color: indianred;
 }
 
 
@@ -279,4 +309,10 @@ div.img {
 
 .pdf {
 	padding: 50px;
+}
+
+/*trying to center pic and left text*/
+.workpx {
+	width: 80%;
+	height: auto;
 }
