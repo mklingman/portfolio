@@ -2,6 +2,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	overflow-x: hidden;
+
 }
 
 html {
@@ -9,7 +11,7 @@ html {
 	font-family: "Roboto Cn", sans-serif;
 }
 
-body {
+.body2 {
 	overflow-x: hidden;
 }
 
@@ -38,7 +40,7 @@ nav {
 	align-items: center;
 	text-transform: uppercase;
 	font-size: 1.6rem;
-	line-height: 2rem
+	line-height: 2.5rem;
 }
 
 .portfolio {
@@ -46,6 +48,8 @@ nav {
 	font-weight: 300;
 	transform: translateX(-100rem);
 	animation: slideIn 1.5s forwards;
+	overflow-y: hidden;
+
 }
 
 .portfolio span {
@@ -65,6 +69,7 @@ nav ul li {
 	list-style: none;
 	transform: translateX(100rem);
 	animation: slideIn 1s forwards;
+	overflow-y: hidden;
 }
 
 nav ul li:nth-child(1) {
@@ -88,7 +93,10 @@ nav ul li a {
 	margin: 0 3rem;
 	position: relative;
 	letter-spacing: 2px;
+
 }
+
+
 
 nav ul li a:last-child {
 	margin-right: 0;
@@ -123,45 +131,49 @@ nav ul li a:hover::after {
 }
 
 @keyframes slideIn {
-	from {}
+
 
 	to {
 		transform: translateX(0);
 	}
 }
 
+
+
 /*start about css*/
 
 main {
 	font-family: "Roboto Cn", sans-serif;
-
+	padding-top: 0rem;
 }
 
 .header2 {
 	background-image: none;
 	background-color: white;
 	width: 100%;
-	height: 20vh;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)) background-size: cover;
+	height: 35vh;
+	/*	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2));*/
+	background-size: cover;
 }
 
 
 h2 {
 	text-align: center;
 	color: #eee;
-	padding-top: 6rem;
+	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
 
 .body2 {
 	background-color: white;
+	max-width: 100vw;
 }
 
 
 
 p {
-	display: flex;
-	align-content: center;
+	/*	display: flex;*/
+	/*	align-content: center;*/
 	text-align: center;
 	padding-left: 20rem;
 	padding-right: 20rem;
@@ -178,7 +190,9 @@ p {
 
 }
 
-
+.newhead1 span {
+	display: block;
+}
 
 div.img {
 	text-align: center
@@ -188,6 +202,8 @@ footer {
 	text-align: center;
 	padding-top: 5rem;
 	padding-bottom: 1rem;
+
+
 
 }
 
@@ -208,6 +224,7 @@ div.img {
 	font-family: "Roboto Cn", sans-serif;
 	letter-spacing: 2px;
 
+
 }
 
 .newhead1 {
@@ -222,52 +239,9 @@ div.img {
 	color: #eee;
 	letter-spacing: .5px;
 	font-weight: 300;
+	padding-top: 10rem;
 }
 
-@media all and (min-width:360px) and (max-width:900px) {
-	p {
-		font-size: 18px;
-		padding-left: 4rem;
-		padding-right: 4rem;
-
-
-	}
-
-	.aboutpic {
-		display: flex;
-		justify-content: center;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-
-	}
-
-	.workspic {
-		display: flex;
-		justify-content: center;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-
-	}
-
-
-
-
-	/*trial here shifting nav bar in response mode*/
-
-	nav li {
-		line-height: 3rem;
-		/*
-		align-items: flex-end;
-		flex-direction: column;
-		float: right;
-*/
-
-	}
-
-	h2 {
-		padding-top: 10rem;
-	}
-}
 
 /*BEGIN PORTFOLIO PAGE CSS HERE*/
 
@@ -290,6 +264,9 @@ div.img {
 	color: indianred;
 }
 
+.clearpic {
+	background-image: none;
+}
 
 
 .morepic {
@@ -297,14 +274,29 @@ div.img {
 	height: 100vh;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)), url(images/house.jpg) center no-repeat;
 	background-size: cover;
+
+
+}
+
+.morepic footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 0;
+
 }
 
 .workspic {
 	display: flex;
 	justify-content: center;
-	padding-top: 1pix;
+	padding-top: 1px;
 	padding-bottom: 2rem;
 
+}
+
+.linked {
+	padding-top: 2.2rem;
 }
 
 .pdf {
@@ -315,4 +307,79 @@ div.img {
 .workpx {
 	width: 80%;
 	height: auto;
+}
+
+.imagesize {
+	width: 60%;
+	height: 60%;
+}
+
+
+
+@media all and (min-width:360px) and (max-width:900px) {
+	p {
+		font-size: 18px;
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+
+	}
+
+	.aboutpic {
+		display: flex;
+		justify-content: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+	}
+
+
+
+	.email {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.email .linkcolormore {
+		letter-spacing: 3px;
+	}
+
+	.workspic {
+		display: flex;
+		justify-content: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+	}
+
+
+
+	/*
+	.morepic {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)), url(images/house.jpg) center no-repeat;
+		background-size: cover;
+
+	}
+*/
+
+
+	/*trial here shifting nav bar in response mode*/
+
+	nav li {
+		line-height: 3rem;
+
+
+	}
+
+	h2 {
+		padding-top: 3rem;
+	}
+}
+
+@media (min-width: 900px) {
+	.email .linkcolormore {
+		letter-spacing: 10px;
+	}
 }
