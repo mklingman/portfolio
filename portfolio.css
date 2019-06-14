@@ -314,6 +314,43 @@ div.img {
 	height: 60%;
 }
 
+/* css for more page javascript*/
+
+.intro {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+}
+
+#typing {
+	position: relative;
+	margin-left: 5px;
+	letter-spacing: 1px;
+}
+
+#typing::after {
+	content: "";
+	position: absolute;
+	/*	right: -1px;*/
+	width: 1px;
+	height: 12%;
+	border-right: 3px solid #eee;
+	animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1%;
+	}
+}
+
+
+/* css for more page javascript ends*/
 
 
 @media all and (min-width:360px) and (max-width:900px) {
