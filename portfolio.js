@@ -1,4 +1,4 @@
-const texts = ['Exhibitions', 'and', 'Prints'];
+const texts = ['Exhibitions', 'and', 'Connecting'];
 let count = 0;
 let index = 0;
 let currentText = '';
