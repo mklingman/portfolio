@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*============================================================================================*/
+/* Header, logo og navigation */
+/*============================================================================================*/
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 100;
+    background-color: transparent;
+    height: 80px;
+    padding: 20px 50px;
+    padding-left: 20px;
+}
+
+#logo {
+    float: left;
+}
+
+.logo_normal {
+    margin-top: -5px;
+    width: 110px;
+}
+
+.burger-logo {
+    text-align: center;
+    margin-left: 40px;
+}
+
+.burger-logo {
+    display: block;
+    background-image: url(../img/logo_dark.png);
+    background-size: cover;
+    z-index: 400;
+    position: absolute;
+    bottom: 40px;
+    width: 150px;
+    height: 75px;
+}
+
+.main-menu {
+    position: relative;
+    z-index: 1999;
+    top: -5px;
+    float: right;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon_submenu {
+    display: none;
+}
+
+.main-menu ul,
+.main-menu ul li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul a,
+.main-menu ul li a {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding: 10px;
+}
+
+.main-menu > ul > li > a {
+    color: #fff;
+    padding: 0 40px 10px 8px;
+    font-size: 13.5px !important;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+}
+
+.main-menu > ul > li:hover > a {
+    opacity: 0.8;
+}
+
+.main-menu button {
+    background-color: #68A849;
+    border: none;
+}
+
+.main-menu button a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#burger-menu {
+    max-width: 400px;
+}
+
+#burger-menu.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    overflow-x: hidden;
+    transition: 0.7s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    text-align: left;
+    margin-top: 30px;
+    list-style: none;
+}
+
+#burger-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 8px;
+}
+
+.overlay a:hover {
+    color: #0a0a0a;
+}
+
+#closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 45px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+#openbtn {
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    transition: 0.7s;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: transparent;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo lyst" class="logo_normal">
+                </a>
+            </div>
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="basket.html">Indkøbskurv</a></li>
+                </ul>
+            </div>
+            <span id="openbtn">&#9776;</span>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="product.html?id=20">Produkter</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li class="basket_icon"><a class="basket_link" href="basket.html"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", sidenVises);
+
+function sidenVises() {
+    console.log(sidenVises);
+
+    document.querySelector("#closebtn").addEventListener("click", closeNav);
+    document.getElementById("openbtn").addEventListener("click", openNav);
+}
+
+function openNav() {
+    document.getElementById("burger-menu").style.width = "80%";
+}
+
+function closeNav() {
+    document.getElementById("burger-menu").style.width = "0%";
+}
+
+function goBack() {
+    window.history.back();
+}
+
+    </script>
+    
+</body>
+</html>

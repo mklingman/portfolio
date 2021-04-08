@@ -1,0 +1,732 @@
+/*0.GENERAL*******************************/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #c31e1e;
+  --light-color: #f0eeee;
+  --dark-color: #141414;
+}
+
+/* .scroll-container {
+/* height: calc(100vh - 16.5px); 
+scroll-behavior: smooth;
+overflow-y: scroll;
+scroll-snap-type: y proximity;
+overflow-x: hidden;
+} */
+
+h1 {
+  font-size: 32px;
+  /* color: var(--dark-color); */
+}
+
+h2 {
+  font-size: 25px;
+  color: var(--dark-color);
+}
+
+h3 {
+  font-size: 15px;
+  font-family: "lanord-bold", sans-serif;
+  line-height: 18px;
+  color: var(--dark-color);
+}
+
+h4 {
+  padding-bottom: 20px;
+  color: var(--dark-color);
+}
+
+p {
+  font-size: 15px;
+  font-family: "lanord-regular", sans-serif;
+  padding-bottom: 20px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "lanord-regular", sans-serif;
+  letter-spacing: 2px;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.white {
+  color: var(--light-color);
+}
+
+.dark {
+  color: var(--dark-color);
+}
+
+.bold {
+  font-family: "lanord-bold", sans-serif;
+}
+
+/*FONT***********************************/
+/*----------- La Nord -----------------*/
+
+@font-face {
+  font-family: "lanord-bold";
+  src: url("fonts/LaNord-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "lanord-light";
+  src: url("fonts/LaNord-Light.woff");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "lanord-semilight";
+  src: url("fonts/LaNord-SemiLight.woff");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "lanord-regular";
+  src: url("fonts/LaNord-Regular.woff");
+  /*	font-weight: bold;*/
+}
+
+/*=========================================*/
+
+/********************************************/
+/*1.HEADER-NAV-MOBILEVERSION*******************************/
+
+header {
+  width: 100%;
+  padding: 0px 0px 15px 0px;
+  height: 60px;
+  position: sticky;
+  background-color: var(--light-color);
+  top: 0;
+  z-index: 3;
+}
+
+#logo {
+  float: left;
+}
+
+.logo_normal {
+  margin-top: -5px;
+  width: 110px;
+}
+/*
+.burger-logo {
+    text-align: center;
+    margin-left: 40px;
+}
+
+.burger-logo {
+    display: block;
+    background-image: url();
+    background-size: cover;
+    z-index: 400;
+    position: absolute;
+    bottom: 40px;
+    width: 150px;
+    height: 75px;
+} */
+
+#burgermenu {
+  max-width: 200px;
+}
+
+/* #burgermenu.overlay {
+    height: 100%;
+    padding-top: 50px; 
+    background-color: rgba(255, 255, 255, 0.97);
+    overflow-x: hidden;
+    transition: 0.7s;
+} */
+
+ul {
+  list-style-type: none;
+}
+
+#burgermenu a {
+  color: var(--dark-color);
+  display: block;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200s;
+}
+
+#burgermenu a:hover {
+  opacity: 0.5;
+  color: var(--main-color);
+}
+
+#closebtn {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#openbtn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 70;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  padding-top: 50px;
+  background-color: var(--light-color);
+  overflow-x: hidden;
+  transition: 0.7s;
+}
+
+/******DESKTOP MENU**********/
+
+.desktop-menu {
+  /* position: relative;
+  /* z-index: 1999; */
+  /* top: 20px;
+  float: right; */ 
+ 
+  display: flex;
+  flex-direction: row;
+justify-content:flex-end;
+padding-top: 20px;
+z-index: 1999;
+  
+}
+
+.desktop-menu ul,
+.desktop-menu ul li {
+  display: flex;
+  flex-direction: row;
+  
+} 
+
+.desktop-menu ul a,
+.desktop-menu ul li a {
+  /* position: relative; */
+  /* display: block; */
+  color: var(--light-color);
+  padding: 0px 35px 10px 8px;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+
+.desktop-menu > ul > li:hover > a {
+  color: var(--main-color);
+}
+
+.desktop-menu button a {
+  text-decoration: none;
+}
+
+/****************************************/
+/*1c. NAME ANIMATION*******************************/
+
+.name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/****************************************/
+/*2.SECTIONS-GENERAL*********************/
+
+.section-wrap {
+  padding: 20px 20px;
+}
+
+.content-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.id-title {
+  font-family: "lanord-bold", sans-serif;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+
+/****************************************/
+/*3.HOME-SECTION*********************************/
+
+#home {
+  height: 90vh;
+  width: 100%;
+  background-color: var(--dark-color);
+  /* background-image: url("testfoto.jpg"); */
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  overflow-x: hidden;
+}
+
+.home-qoute {
+  text-decoration: none;
+  font-family: "lanord-light", sans-serif;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 40px;
+  color: var(--light-color);
+  text-shadow: 0.1px 0.1px 2px var(--light-color);
+}
+
+.gradient {
+  position: absolute;
+ bottom: 200px;
+ left: 0;
+  width: 900px;
+  height: 40%;
+  max-width: none;
+  background-image: linear-gradient(to right, transparent, var(--dark-color) 10%, var(--dark-color));
+}
+
+.name {
+  position: absolute;
+  bottom: 0px;
+  color: var(--light-color);
+}
+
+.outline {color: var(--dark-color);
+-webkit-text-stroke: 0.8px var(--light-color);
+}
+
+/****************************************/
+/*3.-SECTION WORKS*********************************/
+
+#works {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  height: 100vh;
+}
+
+.list {
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+}
+/* 
+.list-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.list-label {
+  font-size: 15px;
+  font-family: "lanord-regular", sans-serif;
+  padding: 20px 0px 10px 0px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.list-item-header {
+  text-align: right;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "lanord-regular", sans-serif;
+  font-size: 30px;
+  line-height 0px;
+  border-top: 1px solid var(--light-color);
+  padding-top: 20px;
+}
+
+#works a {
+  color: var(--light-color);
+}
+
+#works a:hover {
+  font-weight: 600;
+}
+
+.proj > img {
+  width: 40px;
+  /* display: inline-block; */
+  
+}
+
+
+/****************************************/
+/*3.-SECTION ABOUT*********************************/
+
+img {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+#about {
+  background-color: var(--light-color);
+}
+
+.cv {
+  display:flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-family: "lanord-bold", sans-serif;
+  font-size: 30px;
+}
+
+.cv > img {
+  width: 31px;
+  fill:#e6151d;
+}
+/****************************************/
+/*3.-SECTION CONTACT*********************************/
+
+#contact {
+  height: 100vh;
+  background-color: var(--main-color);
+}
+
+#contact li > a {
+  color: var(--light-color);
+  padding-bottom: 30px;
+  font-size: 25px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+#contact li {
+  padding-bottom: 30px;
+  font-family: "lanord-regular";
+}
+
+#contact ul {
+  padding-top: 80px;
+  color: var(--light-color);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+/* lav var på farver */
+
+/****************************************/
+/*WORKS INDIVIDUAL GENERAL*********************************/
+
+.works_page {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.works_page h1 {
+  font-family: "lanord-bold", sans-serif;
+  letter-spacing: 2px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.works_page p {
+  padding-bottom: 10px;
+  
+}
+
+.works_page .column {
+  padding-bottom: 30px;
+} 
+
+.works_content {
+  padding: 20px 20px;
+}
+
+.works_page a {
+  color: var(--main-color);
+}
+
+.works_main {background-color: var(--dark-color);}
+
+/****SLIDESHOW STYLING******/
+  
+  #wrapper {
+    /* width: 100%; */
+    max-width: 410px;
+    position: relative;
+    padding: 10px 0px 40px 0px;
+
+    justify-content: center;
+    display: flex;
+    
+
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--light-color);
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    bottom: 60%;
+    left: 5%;
+    /* transform: translate(50%, -50%); */
+    display: none;
+  }
+  
+  #next {
+    bottom: 60%;
+    right: 5%;
+    /* transform: translate(-50%, -50%); */
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  
+  }
+  
+  figure {
+    height: 100%;
+    width: 400px;
+    object-fit: contain;
+    text-align: center;
+  }
+
+  figcaption {
+      font-size: 12px;
+      font-family: "lanord-regular", sans-serif;
+      padding-bottom: 20px;
+      line-height: 20px;
+  }
+  
+/****************************************/
+/*3.-FOOTER*********************************/
+
+.cvfooter {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 0;
+  background-color: var(--main-color);
+  font-family: 'lanord-regular';
+  font-size: 12px;
+}
+
+footer {
+	text-align: center;
+	color: var(--light-color);
+}
+
+/*------------------------------------------*/
+
+
+
+
+/*------------------------------------------*/
+/* MAX-WIDTH 768px ========================= */
+@media (min-width: 768px){
+
+  header {
+    height: 60px;
+    padding: 10px;
+    background: var(--light-color);
+    position: relative;
+  }
+
+  #home {
+    height: 100vh;
+  }
+
+  .home-qoute {
+    width: 710px;
+    font-size: 60px;
+    bottom: 1200px;
+  }
+  
+  .name {
+    font-size: 25px;
+    bottom: 0;
+    /* color: var(--main-color); */
+  }
+
+ .list {
+  margin: 20px 0px 0px 0px;
+  }
+
+  #about .content-section {
+    padding: 20px 0px 0px 0px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+}
+
+
+
+/*------------------------------------------*/
+/* MAX-WIDTH 1200px ========================= */
+@media (min-width: 1200px){
+
+  header {
+    height: 0px;
+    padding: 0px;
+  }
+
+  #home {
+    height: 100vh;
+    background-size: 40%;
+    background-position: 90% 50% ;
+  }
+
+  .home-qoute {
+    width: 730px;
+    font-size: 55px;
+    bottom: 250px;
+  }
+  
+  .name {
+    font-size: 25px;
+  }
+
+ .list {
+  margin: 15px 0px 0px 0px;
+  }
+
+  #about{
+    height: 100vh;
+  }
+
+  #about .content-section {
+    padding: 20px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 40px;
+    
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p {font-size: 15px;}
+
+  /* works page queryselector */
+
+  .works_page {
+padding-top: 20px;
+  }
+
+  .works_grid {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-gap: 10px 90px;
+  }
+
+  .works_grid_image {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 10px 20px;
+  }
+  
+  .landing_image {
+    padding-bottom: 40px;
+  }
+
+  .works_page h1 {
+    padding-bottom: 40px;
+  }
+  
+  .works_page p {
+ padding-bottom: 10px;
+  }
+  
+  .works_page .column {
+   padding-bottom: 50px;
+  } 
+  
+  .works_content {
+   
+  }
+
+  .visit {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  #wrapper {
+    max-width: 900px;
+    padding: 10px 0px 30px 0px;
+
+}
+}
+
+/*------------------------------------------*/
+/* MAX-WIDTH 1200px - hiding desktop menu in mobile ========================= */
+
+@media (max-width: 1200px) {
+
+  /* #logo {
+    float: none;
+    text-align: center;
+  } */
+
+  .desktop-menu {
+    display: none;
+  }
+
+  #burger-menu {
+    display: block;
+    float: right;
+  }
+
+  #openbtn {
+    display: block;
+  }
+
+  #local-burger-menu {
+    display: block;
+    float: right;
+  }
+
+  #openbtn {
+    display: block;
+  }
+}

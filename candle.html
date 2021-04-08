@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Astro Candles</title>
+</head>
+<body>
+   <main>
+     <div  class="works_main">
+    <div class="works_page">
+<section id="astro" class="works_content">
+    <div class="works_grid">
+          <div class="column">
+        <h1>Astro Candles</h1>
+        <p>This is a school project that I did with a group of co-student. The focus on this assignment was to make use of different types of animations and create a configurator for a product. 
+        </p>
+            <p>Primary role: prototyping, planning code, animations and javascript</p>
+    </div>
+    <div class="column visit"><p class="bold">Visit:</p></div>
+    </div>
+
+<div class="landing_image"><img src="images/astro/astro_splash.jpg"></div>
+
+<div class="works_grid">
+
+<div class="column">
+<p class="bold">Concept</p>
+<p>We chose to make a website for an imaginary company selling scented candles that matches  your personal preferences according to your zodiac sign. In the configurator you have the option to choose number of candles, zodiac sign for each candle and colors. The scents are limited to three per sign and each scent has specific colors.</p>
+</div>
+
+<div class="column">
+    <p class="bold">Planning</p>
+    <p>The focus of the project was coding, but we also wanted to make an appealing design to lift the user experience. In order to do so, we worked on a moodboard, a styletile, wireframes and a high-fi prototype in XD. To get a good overview on the code we made layout diagrams, user stories, a feature list and an activity diagram.</p>
+    </div>
+</div>
+
+
+<div id="wrapper">
+    <div id="carousel">
+      <div id="content">
+        
+        <figure>
+          <img class="item" alt="moodboard" src="images/astro/astro_mood.jpg">
+          <figcaption>Moodboard</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="styletile" src="images/astro/astro_style.jpg">
+          <figcaption>Styletile</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="layout diagram" src="images/astro/astro_layout.jpg">
+          <figcaption>Layout diagram</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="wireframe" src="images/astro/astro_wire.jpg">
+          <figcaption>Wireframe</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="Activity diagram" src="images/astro/astro_activity.jpg">
+          <figcaption>Activity diagram</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="user stories" src="images/astro/astro_story.jpg">
+          <figcaption>User stories</figcaption>
+        </figure>
+
+        <figure>
+          <img class="item" alt="Animations" src="images/astro/astro_animations.jpg">
+          <figcaption>Sketching animations</figcaption>
+        </figure>
+      
+
+      
+      </div>
+    </div>
+
+    <button id="prev">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+      </svg>
+    </button>
+    <button id="next">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path fill="none" d="M0 0h24v24H0V0z" />
+        <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+      </svg>
+    </button>
+  </div>
+
+
+
+<div class="works_grid">
+    <div class="column">
+        <p class="bold">The configurator</p>
+        <p>We build the configurator with Vanilla JS. 
+            The building blocks for our configurator are the SVG and PNG files. This allowed us to manipulate different parts of the image to change colors and features. When choosing a feature, e.g., your zodiac sign, the label on the candle changes. This is done by layering all of the labels and only showing the one that has been clicked, while hiding the others. </p>
+        </div>
+        <div class="column">
+            <p class="bold">The animations</p>
+            <p>Our goal with the animations  was to give the site an organic feel and bring the user into the universe of Astro Candle. We wanted to make a lot of small, subtle tweaks on the site, without overdoing it. We have star constellations floating in the background, text fading in and handwriting.  The animations on the site are made with CSS animation and with the GSAP plugin. </p>
+            </div>
+          </div>
+
+          <div class="works_grid_image">
+            <div class="column">
+                <img src="images/astro/astro_section.jpg">
+                </div>
+                <div class="column">
+                    <img src="images/astro/astro_section2.jpg">
+                    </div>
+
+                </div>
+          
+
+                <a href="index.html#works">Back</a>
+              </div>
+</section>
+
+    </div>  </div> 
+
+   </main>
+
+   <script src="slider.js"></script>
+
+</body>
+</html>
