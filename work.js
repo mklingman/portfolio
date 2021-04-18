@@ -1,11 +1,9 @@
-"use strict";
+//import { cursorSetup } from "./cursor.js";
 
-import { cursorSetup } from "./cursor.js";
+// document.addEventListener("DOMContentLoaded", init);
 
-document.addEventListener("DOMContentLoaded", init);
-
-function init() {
-  cursorSetup();
+export function imageHover() {
+  // ((cursorSetup();
 
   window.addEventListener("mousemove", changeProjectImgPos);
 

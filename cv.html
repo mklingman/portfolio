@@ -25,7 +25,7 @@
 		<section id="cv" class="section-wrap">
 			
 
-			<a href="index.html#about"><h1 class="id-title main-color">CV</h1></a>
+			<a href="index.html#about" class="slide"><h1 class="id-title main-color">CV</h1></a>
 		
 			<div class="cv-section">
 			<h2>MULTIMEDIA DESIGNER <br>
@@ -43,7 +43,7 @@
 
 					<h3>WORK</h3>
 					<p>
-						Freelance / Webdevelopment 2021 -<br>
+						Freelance / Web development 2021 -<br>
 
 						Netto, CPH / Evening manager 2019 - <br>
 
@@ -58,7 +58,7 @@
 
 			
 		</div>
-		<a href="index.html#about">Back</a>
+		<a href="index.html#about" class="back_button">Back</a>
 		<footer>
 			created by annemette mygind © 2021
 			</footer>
@@ -67,6 +67,21 @@
 
 </section>
 
-<script type="module" src="work.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script type="module">
+	"use strict";
+	
+	import { cursorSetup } from "./cursor.js";
+	cursorSetup();
+
+	window.addEventListener("DOMContentLoaded", cvAnimation);
+
+	function cvAnimation(){
+		const timeline = gsap.timeline();
+  timeline.from(".slide", { delay: 0.2, x: -80, duration: 1, ease: "power4.out", });
+  timeline.from(".cv-section, footer, .back-button", { delay: 0, opacity: 0, duration: 1, ease: "slow" }, "-=0.1");
+
+	}
+</script>
 
 </body>

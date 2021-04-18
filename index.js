@@ -1,5 +1,10 @@
 "use strict";
 
+import { imageHover } from "./work.js";
+import { cursorSetup } from "./cursor.js";
+imageHover();
+cursorSetup();
+
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -12,8 +17,8 @@ function start() {
 
 function splashAni() {
   const timeline = gsap.timeline();
-  timeline.from(".home-qoute", { delay: 0.2, opacity: 0, duration: 1 });
-  timeline.from(".portfolio, .desktop-menu, .name", { delay: 0.2, opacity: 0, duration: 1 }, "-=0.1");
+  timeline.from(".home-qoute", { delay: 0.2, opacity: 0, duration: 1, ease: "slow" });
+  timeline.from(".portfolio, .desktop-menu, .name", { delay: 0.2, opacity: 0, duration: 1, ease: "slow" }, "-=0.1");
 }
 
 function cvArrow() {
